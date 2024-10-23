@@ -67,6 +67,7 @@ function initGame(e) {
 }
 
 // Function to display popup messages
+// Function to display popup messages
 function showPopup(message) {
     let popup = document.createElement('div');
     popup.id = "popup";
@@ -75,13 +76,15 @@ function showPopup(message) {
     document.body.appendChild(popup);
 }
 
-// Function to close popup
+// Function to close popup and reset the game
 function closePopup() {
     let popup = document.getElementById('popup');
     if (popup) {
-        popup.remove();
+        popup.remove(); // Remove the popup
+        randomWord(); // Automatically reset the game
     }
 }
+
 
 // Event listeners for game control
 resetBtn.addEventListener("click", randomWord);
