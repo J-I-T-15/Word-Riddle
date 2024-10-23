@@ -56,7 +56,6 @@ function initGame(e) {
     setTimeout(() => {
         if (correctLetters.length === new Set(word).size) { // All unique letters guessed
             showPopup(`Congrats! You found the word ${word.toUpperCase()}`);
-            randomWord();
         } else if (maxGuesses < 1) {
             showPopup(`Game over! The word was ${word.toUpperCase()}`);
             for (let i = 0; i < word.length; i++) {
@@ -64,8 +63,10 @@ function initGame(e) {
             }
         }
     }, 10);
+    
 }
 
+// Function to display popup messages
 // Function to display popup messages
 // Function to display popup messages
 function showPopup(message) {
@@ -84,6 +85,7 @@ function closePopup() {
         randomWord(); // Automatically reset the game
     }
 }
+
 
 
 // Event listeners for game control
