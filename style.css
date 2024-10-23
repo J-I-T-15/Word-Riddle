@@ -15,6 +15,15 @@ body {
   min-height: 100vh;
   padding: 20px;
   background: linear-gradient(135deg, #6e45e2, #88d3ce);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Background Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Header Styles */
@@ -26,7 +35,24 @@ header h2 {
   font-size: 36px;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite ease-in-out;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: #ffffff;
+  }
+  50% {
+    transform: scale(1.1);
+    color: #ffcc70;
+  }
+  100% {
+    transform: scale(1);
+    color: #ffffff;
+  }
+}
+
 header p {
   font-size: 18px;
   color: #d9e9f8;

@@ -63,7 +63,7 @@ function initGame(e) {
                 inputs.querySelectorAll("input")[i].value = word[i];
             }
         }
-    }, 100);
+    }, 10);
 }
 
 // Function to display popup messages
